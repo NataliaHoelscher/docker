@@ -2,10 +2,10 @@ FROM python:3-alpine3.7
 
 LABEL maintainer="hoelscher.nataliia@hotmail.de"
 
-# RUN mkdir -p /usr/src/app/
+RUN pip install pipenv
 
-# WORKDIR /usr/src/app/
+WORKDIR $
 
-# COPY . /usr/src/app/
+COPY . Pipfile Pipfile.lock
 
-# CMD ["python", "app.py"]
+CMD ["python", "app.py"]
